@@ -15,5 +15,8 @@ For [preprocess.py](https://github.com/amunkharel/AMLFinalProject/blob/main/prep
 If running locally, plz do the following steps:
 - Change the 2nd line (where os.chdir is set) to point to the same directory the data directory is stored in.
 - Change the line 30-32 and line 49-50 as comments shown in .py file.
+- Then try "python preprocess.py" to run preprocess.py.
+- Then try "python ImageAnalysis.py D1" to run ImageAnalysis.py.
+
 
 Once this is done each python script / notebook will run as intended.
