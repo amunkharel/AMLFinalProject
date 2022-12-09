@@ -1,5 +1,5 @@
 import os
-os.chdir('/Users/yebi/Library/CloudStorage/OneDrive-VirginiaTech/Research/Codes/research/BCS/BodyWeight') 
+os.chdir('/Users/yebi/Library/CloudStorage/OneDrive-VirginiaTech/Research/Codes/research/BCS/BodyWeight') ## Change this into ur own folder
 
 import argparse
 parser = argparse.ArgumentParser(description =
@@ -26,16 +26,11 @@ import numpy as np
 # import argparse
 import cv2
 import pandas as pd
-
-# rootdir = "./DairyLMC"
-rootdir = "/Volumes/MyPassport1"
-# depthdir = "./DairyLMC/D1/depth/4973AM"
-temp_dep = "/Volumes/MyPassport1/" + args.day + "/depth/"
-temp_csv = "/Volumes/MyPassport1/" + args.day + "/CSV/"
-# csvdir = "./DairyLMC/D1/CSV/4973AM/"
-temp_day = "./outputs/" + args.day + "/" + args.day + "_"
-print(temp_day)
-# img_out = "./imgs/D1/"
+                                                            ## If run for dataset in GitHub:
+rootdir = "/Volumes/MyPassport1"                            ## Change rootdir into "./"
+temp_dep = "/Volumes/MyPassport1/" + args.day + "/depth/"   ## Change temp_dep into "./" + "D1" + "/depth/"
+temp_csv = "/Volumes/MyPassport1/" + args.day + "/CSV/"     ## Change temp_csv into "./" + "D1" + "/CSV/"
+temp_day = "./outputs/" + args.day + "/" + args.day + "_"   ## Change temp_day into "./outputs" + "D1" + "/" + "D1" + "_"
 
 
 for cowid in os.listdir(temp_dep):
