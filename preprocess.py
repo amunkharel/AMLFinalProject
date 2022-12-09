@@ -33,7 +33,6 @@ temp_csv = "/Volumes/MyPassport1/" + args.day + "/CSV/"     ## Change "/Volumes/
 temp_day = "./outputs/" + args.day + "/" + args.day + "_"  
 img_out = "./qc_img/" + args.day + "/" + args.day + "_"
 
-
 for cowid in os.listdir(temp_dep):
   summ = os.path.join(temp_day+cowid+".csv")
   if os.path.isfile(summ):
