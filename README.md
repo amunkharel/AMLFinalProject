@@ -21,4 +21,4 @@ If running locally, plz do the following steps:
 
 Once this is done each python script / notebook will run as intended.
 
-For [COW_CNN.ipynb](https://github.com/amunkharel/AMLFinalProject/blob/main/COW_CNN.ipynb):
+For [Transformer_CIFAR10.ipynb](https://github.com/amunkharel/AMLFinalProject/blob/main/Transformer_CIFAR10.ipynb):
