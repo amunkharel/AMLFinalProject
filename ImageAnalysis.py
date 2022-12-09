@@ -27,10 +27,10 @@ import numpy as np
 import cv2
 import pandas as pd
                                                             ## If run for dataset in GitHub:
-rootdir = "/Volumes/MyPassport1"                            ## Change rootdir into "./"
-temp_dep = "/Volumes/MyPassport1/" + args.day + "/depth/"   ## Change temp_dep into "./" + "D1" + "/depth/"
-temp_csv = "/Volumes/MyPassport1/" + args.day + "/CSV/"     ## Change temp_csv into "./" + "D1" + "/CSV/"
-temp_day = "./outputs/" + args.day + "/" + args.day + "_"   ## Change temp_day into "./outputs" + "D1" + "/" + "D1" + "_"
+rootdir = "/Volumes/MyPassport1"                            ## Change rootdir into "./"     ####################
+temp_dep = "/Volumes/MyPassport1/" + args.day + "/depth/"   ## Change temp_dep into "./"    ####################
+temp_csv = "/Volumes/MyPassport1/" + args.day + "/CSV/"     ## Change temp_csv into "./"    ####################
+temp_day = "./outputs/" + args.day + "/" + args.day + "_"   
 
 
 for cowid in os.listdir(temp_dep):
@@ -46,8 +46,8 @@ for cowid in os.listdir(temp_dep):
           writer = csv.writer(output)
           writer.writerow(["Day", "ID", "Frame", "Width", "Length", "Height_Centroid", "Height_average", "Volume"])
           for root, dirs, files in os.walk(depthdir):
-            Day = root.split("/")[3]
-            ID = root.split("/")[5]
+            Day = root.split("/")[3]                  ## If run for github, change [3] into [2] ###################      
+            ID = root.split("/")[5]                   ## If run for github, change [5] into [4] ###################
             for file in files:
                 file_path = os.path.join(root, file)
                 print("Now is running: ", file_path)
