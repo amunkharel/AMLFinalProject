@@ -1,5 +1,5 @@
 import os
-os.chdir('/Users/yebi/Library/CloudStorage/OneDrive-VirginiaTech/Research/Codes/research/BCS/BodyWeight') 
+os.chdir('/Users/yebi/Library/CloudStorage/OneDrive-VirginiaTech/Research/Codes/research/BCS/BodyWeight') ## Change this into ur own folder.
 
 import argparse
 parser = argparse.ArgumentParser(description =
@@ -27,14 +27,10 @@ import numpy as np
 import cv2
 import pandas as pd
 
-# rootdir = "./DairyLMC"
-rootdir = "/Volumes/MyPassport1"
-# depthdir = "./DairyLMC/D1/depth/4973AM"
-temp_dep = "/Volumes/MyPassport1/" + args.day + "/depth/"
-temp_csv = "/Volumes/MyPassport1/" + args.day + "/CSV/"
-# csvdir = "./DairyLMC/D1/CSV/4973AM/"
-temp_day = "./outputs/" + args.day + "/" + args.day + "_"
-# print(temp_day)
+rootdir = "/Volumes/MyPassport1"                            ## Change rootdir into "./" ####################
+temp_dep = "/Volumes/MyPassport1/" + args.day + "/depth/"   ## Change "/Volumes/MyPassport1/“ into "./" ####################
+temp_csv = "/Volumes/MyPassport1/" + args.day + "/CSV/"     ## Change "/Volumes/MyPassport1/" into "./" ####################
+temp_day = "./outputs/" + args.day + "/" + args.day + "_"  
 img_out = "./qc_img/" + args.day + "/" + args.day + "_"
 
 
@@ -51,8 +47,8 @@ for cowid in os.listdir(temp_dep):
           writer = csv.writer(output)
           writer.writerow(["Day", "ID", "Frame", "Width", "Length", "Height_Centroid", "Height_average", "Volume"])
           for root, dirs, files in os.walk(depthdir):
-            Day = root.split("/")[3]
-            ID = root.split("/")[5]
+            Day = root.split("/")[3]                  ## If run for github, change [3] into [2] ###################
+            ID = root.split("/")[5]                   ## If run for github, change [5] into [4] ###################
             for file in files:
                 file_path = os.path.join(root, file)
                 print("Now is running: ", file_path)
