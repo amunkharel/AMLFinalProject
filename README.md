@@ -18,8 +18,8 @@ If running locally, plz do the following steps:
 - Then try "python preprocess.py D1" to run preprocess.py.
 - Then try "python ImageAnalysis.py D1" to run ImageAnalysis.py.
 
+For [Transformer_CIFAR10.ipynb](https://github.com/amunkharel/AMLFinalProject/blob/main/Transformer_CIFAR10.ipynb):
+- Install tensorflow-addons on your device using `!pip install tensorflow-addons`
 
 Once this is done each python script / notebook will run as intended.
 
-For [Transformer_CIFAR10.ipynb](https://github.com/amunkharel/AMLFinalProject/blob/main/Transformer_CIFAR10.ipynb):
-- `!pip install tensorflow-addons`
